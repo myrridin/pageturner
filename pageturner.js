@@ -1,6 +1,6 @@
 var api_endpoint = "http://www.thomashart.me:4730/";
 var sentence_list;
-var voiceArr;
+var voice_list;
 var sentence_index = 0;
 var playing = false;
 
@@ -12,7 +12,7 @@ $(document).ready(function() {
 
 function pageturner_init() {
   // Get voice array
-  voiceArr = window.speechSynthesis.getVoices();
+  voice_list = window.speechSynthesis.getVoices();
 }
 
 function bind_player_controls() {
@@ -91,8 +91,6 @@ function play_sentence() {
     var speech_text = sentence.html();
     if(speech_text != '') {
       var utterance = new SpeechSynthesisUtterance(speech_text);
-      utterance.voice = voiceArr[10];
-      utterance.rate = 0.1;
       utterance.onend = function() {
         if(playing && !window.speechSynthesis.speaking) {
           play_sentence();
