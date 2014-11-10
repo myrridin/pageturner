@@ -19,25 +19,25 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Page Turner</a>
+          <a class="navbar-brand ajax-link" href="home.html" class="ajax-link">Page Turner</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#"><strong>Read Now</strong></a></li>
-            <li><a href="#">All Stories</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="#" class='random-story-link'><strong>Read Now</strong></a></li>
+            <li><a href="#" class='all-stories-link'>All Stories</a></li>
+            <li><a href="about.html" class="ajax-link">About</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div><!--/.container-fluid -->
     </nav>
-    <div class="container text-center">
+    <div class="container text-center" id="site_content">
       <div id="text_to_read">
         <p>Welcome to Page Turner. Learn to read by listening to stories. Press play and we will read the text to you. You can pause or rewind at any time.</p>
         <p>Tap the green button below to jump into a random story. Tap the blue button to see a list of all stories.</p>
       </div>
       <div>
-        <p><a href="#" class="btn btn-lg btn-success">Read a Random Story</a></p>
-        <p><a href="#" class="btn btn-lg btn-primary">See All Stories</a></p>
+        <p><a href="#" id="random_story" class="btn btn-lg btn-success">Read a Random Story</a></p>
+        <p><a href="#" id="story_list" class="btn btn-lg btn-primary">See All Stories</a></p>
       </div>
     </div>
   </div>

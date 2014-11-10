@@ -1,0 +1,19 @@
+{
+  "stories": [
+    {
+      "title": "Test Story 1",
+      "author": "Test Author 1",
+      "body": "<p>This is the test body. This is the test body. This is the test body.</p><p>This is the test body. This is the test body. This is the test body.</p>"
+    },
+    {
+      "title": "Test Story 2",
+      "author": "Test Author 2",
+      "body": "<p>This is the test body. This is the test body. This is the test body.</p><p>This is the test body. This is the test body. This is the test body.</p>"
+    },
+    {
+      "title": "Test Story 3",
+      "author": "Test Author 3",
+      "body": "<p>This is the test body. This is the test body. This is the test body.</p><p>This is the test body. This is the test body. This is the test body.</p>"
+    }
+  ]
+}
