@@ -33,10 +33,13 @@ function pageturner_fast_backward(e) {
 function pageturner_backward(e) {
   console.log('BUTTON backward');
 
-  if(sentence_index > 1) {
-    sentence_index -= 2;
-    if(window.speechSynthesis.speaking) {
+  if(sentence_index > 0) {
+    if(sentence_index > 1 && window.speechSynthesis.speaking) {
+      sentence_index -= 2;
       window.speechSynthesis.cancel();
+    }
+    else {
+      sentence_index -= 1;
     }
   }
   prevent_default(e);
