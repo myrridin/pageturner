@@ -106,6 +106,8 @@ function spanify_text_to_read() {
     body_text = body_text.replace(/<i>/g, '');
     body_text = body_text.replace(/<\/i>/g, '');
     body_text = body_text.replace(/<span>\s*<\/span>/g, ' ');
+    body_text = body_text.replace(/<span>"<\/span>/g, '"');
+    body_text = body_text.replace(/<span>\)<\/span>/g, ')');
     text_div.html(body_text);
     sentence_list = $('#text_to_read span');
   }
@@ -121,6 +123,7 @@ function play_sentence() {
     var speech_text = sentence.text();
     if(speech_text != '') {
       var utterance = new SpeechSynthesisUtterance(speech_text);
+      utterance.rate = 0.15;
       utterance.onend = function() {
         if(playing && !window.speechSynthesis.speaking) {
           play_sentence();
