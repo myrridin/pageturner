@@ -1,4 +1,3 @@
-var api_endpoint = "http://www.thomashart.me:4730/";
 var sentence_list = [];
 var sentence_index = 0;
 var playing = false;
